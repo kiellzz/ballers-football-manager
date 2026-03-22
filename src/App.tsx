@@ -6,7 +6,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Players />} />
       <Route path="/players" element={<Players />} />
-      <Route path="*" element={<Navigate to="/players" />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 }
