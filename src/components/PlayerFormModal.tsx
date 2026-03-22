@@ -144,13 +144,25 @@ export default function PlayerFormModal({
         )}
 
         <form className="player-form" onSubmit={onSubmit}>
-          <input
-            name="nome"
-            placeholder="Nome do jogador"
-            required
-            value={formData.nome}
-            onChange={onChange}
-          />
+          <div className="input-wrapper">
+            <input
+              name="nome"
+              placeholder="Nome do jogador"
+              required
+              value={formData.nome}
+              onChange={onChange}
+              maxLength={22}
+              className="form-input"
+            />
+
+            <span
+              className={`input-counter ${
+                formData.nome.length >= 18 ? "warning" : ""
+              } ${formData.nome.length === 22 ? "danger" : ""}`}
+            >
+              {formData.nome.length}/22
+            </span>
+          </div>
 
           <div className="form-grid">
             <input

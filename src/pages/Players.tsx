@@ -3,16 +3,13 @@ import background from "../assets/background.jpeg";
 import logo from "../assets/logo.png";
 import hoverSound from "../assets/sounds/hover.mp3";
 import confirmSound from "../assets/sounds/confirm.wav";
-
 import PlayerCard from "../components/PlayerCard";
 import PlayerFormModal from "../components/PlayerFormModal";
 import PlayersFilters from "../components/PlayersFilters";
 import ConfirmModal from "../components/ConfirmModal";
 import Toast from "../components/Toast";
-
 import { usePlayers } from "../hooks/usePlayers";
 import { playHover, playSound } from "../utils/sound";
-
 import type { Player, Position } from "../types/PlayersType";
 import {
   countryAliases,
@@ -57,11 +54,12 @@ export default function Players() {
   const [countryLoading, setCountryLoading] = useState(false);
   const [countryError, setCountryError] = useState("");
   const [formError, setFormError] = useState("");
-
   const [searchTerm, setSearchTerm] = useState("");
   const [filterPosition, setFilterPosition] = useState("");
   const [filterCountry, setFilterCountry] = useState("");
   const [filterAge, setFilterAge] = useState("");
+  const [filterOverall, setFilterOverall] = useState("");
+  const [sortAge, setSortAge] = useState("");
 
   function showToast(
     message: string,
@@ -101,6 +99,8 @@ export default function Players() {
     setFilterPosition("");
     setFilterCountry("");
     setFilterAge("");
+    setFilterOverall("");
+    setSortAge("");
   }
 
   function handleDeletePlayer(id: string, nome: string) {
@@ -186,6 +186,10 @@ export default function Players() {
   ) {
     const { name, value } = e.target;
     let newValue = value;
+
+     if (name === "nome") {
+    newValue = newValue.slice(0, 22);
+   }
 
     if (name === "idade") {
       newValue = newValue.replace(/\D/g, "").slice(0, 2);
@@ -310,30 +314,58 @@ export default function Players() {
     ).sort((a, b) => a.localeCompare(b, "pt-BR"));
   }, [players]);
 
-  const filteredPlayers = useMemo(() => {
-    return players.filter((player) => {
-      const matchesName = normalizeText(player.nome).includes(
-        normalizeText(searchTerm)
-      );
+ const filteredPlayers = useMemo(() => {
+  const filtered = players.filter((player) => {
+    const matchesName = normalizeText(player.nome).includes(
+      normalizeText(searchTerm)
+    );
 
-      const matchesPosition =
-        !filterPosition || player.posicao === filterPosition;
+    const matchesPosition =
+      !filterPosition || player.posicao === filterPosition;
 
-      const matchesCountry =
-        !filterCountry ||
-        normalizeText(player.nacionalidade) === normalizeText(filterCountry);
+    const matchesCountry =
+      !filterCountry ||
+      normalizeText(player.nacionalidade) === normalizeText(filterCountry);
 
-      const matchesAge =
-        !filterAge ||
-        (filterAge === "16-20" && player.idade >= 16 && player.idade <= 20) ||
-        (filterAge === "21-25" && player.idade >= 21 && player.idade <= 25) ||
-        (filterAge === "26-30" && player.idade >= 26 && player.idade <= 30) ||
-        (filterAge === "31-35" && player.idade >= 31 && player.idade <= 35) ||
-        (filterAge === "36+" && player.idade >= 36);
+    const matchesAge =
+      !filterAge ||
+      (filterAge === "16-20" && player.idade >= 16 && player.idade <= 20) ||
+      (filterAge === "21-25" && player.idade >= 21 && player.idade <= 25) ||
+      (filterAge === "26-30" && player.idade >= 26 && player.idade <= 30) ||
+      (filterAge === "31-35" && player.idade >= 31 && player.idade <= 35) ||
+      (filterAge === "36+" && player.idade >= 36);
 
-      return matchesName && matchesPosition && matchesCountry && matchesAge;
-    });
-  }, [players, searchTerm, filterPosition, filterCountry, filterAge]);
+    return matchesName && matchesPosition && matchesCountry && matchesAge;
+  });
+
+  const sorted = [...filtered];
+
+  if (filterOverall === "desc") {
+    sorted.sort((a, b) => b.overall - a.overall);
+  }
+
+  if (filterOverall === "asc") {
+    sorted.sort((a, b) => a.overall - b.overall);
+  }
+
+  if (sortAge === "desc") {
+    sorted.sort((a, b) => b.idade - a.idade);
+  }
+
+  if (sortAge === "asc") {
+    sorted.sort((a, b) => a.idade - b.idade);
+  }
+
+  return sorted;
+}, [
+  players,
+  searchTerm,
+  filterPosition,
+  filterCountry,
+  filterAge,
+  filterOverall,
+  sortAge,
+]);
 
   const editingPlayer =
     players.find((player) => player.id === editingPlayerId) || null;
@@ -374,6 +406,10 @@ export default function Players() {
           onFilterCountryChange={setFilterCountry}
           onFilterAgeChange={setFilterAge}
           onClearFilters={clearFilters}
+          filterOverall={filterOverall}
+          onFilterOverallChange={setFilterOverall}
+          sortAge={sortAge}
+          onSortAgeChange={setSortAge}
         />
 
         <div className="players-list">
