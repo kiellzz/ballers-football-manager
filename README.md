@@ -13,6 +13,14 @@ Aplicação web de gerenciamento de jogadores de futebol com foco em experiênci
 
 ---
 
+## 🚀 Live Demo
+
+<p align="center">
+  <a href="https://kiellzz.github.io/Ballers_CRUD/" target="_blank">
+    <img src="https://img.shields.io/badge/🔗%20Acessar%20Projeto-1e293b?style=for-the-badge&logo=vercel&logoColor=white"/>
+  </a>
+</p>
+
 ## 🧠 Objetivo do Projeto
 
 O **BALLERS** é um CRUD completo de jogadores com diferenciais de produto:
