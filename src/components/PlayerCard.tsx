@@ -6,7 +6,6 @@ type PlayerCardProps = {
   player: Player;
   onEdit: (player: Player) => void;
   onDelete: (id: string, nome: string) => void;
-
   hoverSound: string;
   confirmSound: string;
 };
@@ -18,11 +17,11 @@ export default function PlayerCard({
   hoverSound,
   confirmSound,
 }: PlayerCardProps) {
+  const defaultImage = `${import.meta.env.BASE_URL}players/default.webp`;
+  const playerImage = player.imagem || getPlayerImage(player.nome);
+
   return (
-    <div
-      className="player-card"
-      onMouseEnter={() => playHover(hoverSound)}
-    >
+    <div className="player-card" onMouseEnter={() => playHover(hoverSound)}>
       <div
         className={`overall-badge ${
           player.overall >= 90
@@ -37,12 +36,12 @@ export default function PlayerCard({
 
       <div className="player-image-wrapper">
         <img
-          src={player.imagem || getPlayerImage(player.nome)}
+          src={playerImage}
           alt={player.nome}
           className="player-img"
           onError={(e) => {
             e.currentTarget.onerror = null;
-            e.currentTarget.src = "/players/default.webp";
+            e.currentTarget.src = defaultImage;
           }}
         />
       </div>
