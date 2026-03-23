@@ -8,8 +8,7 @@ Aplicação web de gerenciamento de jogadores de futebol com foco em experiênci
 
 ## 🚀 Demonstração
 
-📌 Em breve: deploy online +  criação de tela de Login/Register
-📌 Projeto local rodando via Vite
+📌 Em breve: criação de tela de Login/Register + backend 
 
 ---
 
