@@ -65,18 +65,6 @@ export default function PlayerCard({
       <div className="player-card-actions">
         <button
           type="button"
-          className="edit-player-btn"
-          onMouseEnter={() => playHover(hoverSound)}
-          onClick={() => {
-            playSound(confirmSound, 0.25);
-            onEdit(player);
-          }}
-        >
-          Editar
-        </button>
-
-        <button
-          type="button"
           className="delete-player-btn"
           onMouseEnter={() => playHover(hoverSound)}
           onClick={() => {
@@ -85,6 +73,18 @@ export default function PlayerCard({
           }}
         >
           Excluir jogador
+        </button>
+
+        <button
+          type="button"
+          className="edit-player-btn"
+          onMouseEnter={() => playHover(hoverSound)}
+          onClick={() => {
+            playSound(confirmSound, 0.25);
+            onEdit(player);
+          }}
+        >
+          Editar
         </button>
       </div>
     </div>
