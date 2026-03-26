@@ -138,7 +138,10 @@ src/
 * Upload opcional
 * Resize automático (120x120)
 * Validação de tipo e tamanho
-
+* Recorte interativo antes de salvar (Crop)
+* Controle de zoom e posicionamento
+* Redimensionamento para exibição consistente
+  
 ### 🔊 Sound Effects
 
 * Hover (UI feedback)
