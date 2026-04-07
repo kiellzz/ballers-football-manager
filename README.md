@@ -22,113 +22,113 @@
 
 ## 🧠 About the Project
 
-The **BALLERS** is a complete football player management system designed to simulate a real product experience.
+**BALLERS** is a complete football player management system designed to simulate a real product experience.
 
-Built with focus on:
+Built with a focus on:
 
-- modern UI/UX
-- smooth interactions
-- scalable architecture
-- real-world validation logic
+- modern UI/UX  
+- smooth interactions  
+- scalable architecture  
+- real-world validation logic  
 
 ---
 
 ## ✨ Features
 
-### 🧩 CRUD Completo
+### 🧩 Full CRUD
 
-* Criar jogador  
-* Editar jogador  
-* Excluir jogador  
-* Filtros e listagem dinâmica  
-
----
-
-### 🔍 Filtros Avançados
-
-* Nome  
-* Posição  
-* Nacionalidade  
-* Faixa etária  
-* Overall  
+* Create player  
+* Edit player  
+* Delete player  
+* Dynamic filtering and listing  
 
 ---
 
-### 🌍 Integração com API
+### 🔍 Advanced Filters
 
-* Busca inteligente de países  
-* Suporte a PT/EN  
-* Exibição de bandeiras  
+* Name  
+* Position  
+* Nationality  
+* Age range  
+* Overall rating  
 
 ---
 
-### 🖼️ Upload de Imagem
+### 🌍 API Integration
 
-* Upload opcional  
-* Resize automático (120x120)  
-* Validação de tipo e tamanho  
-* Recorte interativo antes de salvar  
-* Controle de zoom e posicionamento  
+* Smart country search  
+* PT/EN support  
+* Flag rendering  
+
+---
+
+### 🖼️ Image Upload
+
+* Optional upload  
+* Automatic resize (120x120)  
+* File type and size validation  
+* Interactive crop before saving  
+* Zoom and positioning controls  
 
 ---
 
 ### 🔊 Sound Effects
 
 * Hover (UI feedback)  
-* Confirm (ações)  
+* Confirm (user actions)  
 
 ---
 
-### ✨ UX / UI Diferenciada
+### ✨ Enhanced UX / UI
 
-* Animações suaves  
-* Efeito shine nos cards  
-* Toasts customizados  
-* Modal de confirmação  
-* Feedback visual completo  
+* Smooth animations  
+* Card shine effect  
+* Custom toasts  
+* Confirmation modal  
+* Complete visual feedback  
 
 ---
 
 ## 🎨 Design
 
-* Tema escuro com destaque roxo  
-* Tipografia inspirada em interfaces esportivas  
-* Layout centralizado e responsivo  
-* Microinterações inspiradas em jogos  
+* Dark theme with purple highlights  
+* Typography inspired by sports interfaces  
+* Centered and responsive layout  
+* Game-inspired microinteractions  
 
 ---
 
-## 🧠 Arquitetura
+## 🧠 Architecture
 
-Estrutura organizada com separação clara de responsabilidades:
+Well-structured project with clear separation of concerns:
 
 * **Components** → UI  
-* **Hooks** → lógica e estado  
-* **Utils** → regras de negócio  
-* **Pages** → orquestração  
+* **Hooks** → state and logic  
+* **Utils** → business rules  
+* **Pages** → orchestration  
 
 ---
 
-## 🧪 Validações
+## 🧪 Validations
 
-* Nome obrigatório  
-* Idade entre 16 e 50  
-* Overall entre 0 e 99  
-* País válido via API  
-* Prevenção de duplicidade  
+* Required name  
+* Age between 16 and 50  
+* Overall between 0 and 99  
+* Valid country via API  
+* Duplicate prevention  
 
 ---
 
-## 💾 Persistência
+## 💾 Persistence
 
-* Dados salvos no `localStorage`  
-* Inicialização com dataset padrão  
+* Data stored in `localStorage`  
+* Initialized with a default dataset  
 
 ---
 
 ## 📦 Project Structure
 
-```bash
+```bash id="ballers_struct"
 src/
   assets/
     images/
@@ -181,11 +181,12 @@ src/
   styles.css
 ````
 
-## 📈 Próximos Passos
+---
 
-* Backend com Node.js + MongoDB
-* Autenticação de usuário
-* Formação tática (drag & drop)
+## 📈 Next Steps
+
+* Tactical formation system
+* Adding more players 
 
 ---
 
@@ -195,3 +196,4 @@ Developed by **Ezequiel Borges**
 
 * GitHub: [https://github.com/kiellzz](https://github.com/kiellzz)
 * LinkedIn: [https://linkedin.com/in/ezequielborgesdev/](https://linkedin.com/in/ezequielborgesdev/)
+
