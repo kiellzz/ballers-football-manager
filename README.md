@@ -12,8 +12,6 @@
 
 ## 🚀 Live Demo
 
-## 🚀 Live Demo
-
 <p align="center">
   <a href="https://kiellzz.github.io/Ballers_CRUD/" target="_blank">
     <img src="https://img.shields.io/badge/⚽%20Play%20Now-6366f1?style=for-the-badge&logo=vercel&logoColor=white"/>
