@@ -1,49 +1,134 @@
 # ⚽ BALLERS — Football Squad Manager
 
-Aplicação web de gerenciamento de jogadores de futebol com foco em experiência de usuário moderna, inspirada em interfaces de jogos de futebol.
-
-> Projeto desenvolvido com foco em UX, organização de código e praticar React + TypeScript.
+<p align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=ffffff" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=ffffff" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=ffffff" />
+  <img src="https://img.shields.io/badge/API-REST%20Countries-3b82f6?style=for-the-badge" />
+</p>
 
 ---
 
 ## 🚀 Live Demo
 
+## 🚀 Live Demo
+
 <p align="center">
   <a href="https://kiellzz.github.io/Ballers_CRUD/" target="_blank">
-    <img src="https://img.shields.io/badge/🔗%20Acessar%20Projeto-1e293b?style=for-the-badge&logo=vercel&logoColor=white"/>
+    <img src="https://img.shields.io/badge/⚽%20Play%20Now-6366f1?style=for-the-badge&logo=vercel&logoColor=white"/>
   </a>
 </p>
 
-## 🧠 Objetivo do Projeto
+---
 
-O **BALLERS** é um CRUD completo de jogadores com diferenciais de produto:
+## 🧠 About the Project
 
-* Interface moderna e imersiva (estilo game UI)
-* Microinterações (animações e efeitos sonoros)
-* Validação robusta de dados
-* Arquitetura modular e escalável
+The **BALLERS** is a complete football player management system designed to simulate a real product experience.
+
+Built with focus on:
+
+- modern UI/UX
+- smooth interactions
+- scalable architecture
+- real-world validation logic
 
 ---
 
-## 🧱 Tecnologias Utilizadas
+## ✨ Features
 
-### Frontend
+### 🧩 CRUD Completo
 
-* React
-* TypeScript
-* Vite
-* CSS
+* Criar jogador  
+* Editar jogador  
+* Excluir jogador  
+* Filtros e listagem dinâmica  
 
-### APIs
+---
 
-* [REST Countries](https://restcountries.com)
+### 🔍 Filtros Avançados
 
-### Outros
+* Nome  
+* Posição  
+* Nacionalidade  
+* Faixa etária  
+* Overall  
 
-* localStorage (persistência)
-* FlagCDN (bandeiras)
+---
 
-## 📁 Estrutura do Projeto
+### 🌍 Integração com API
+
+* Busca inteligente de países  
+* Suporte a PT/EN  
+* Exibição de bandeiras  
+
+---
+
+### 🖼️ Upload de Imagem
+
+* Upload opcional  
+* Resize automático (120x120)  
+* Validação de tipo e tamanho  
+* Recorte interativo antes de salvar  
+* Controle de zoom e posicionamento  
+
+---
+
+### 🔊 Sound Effects
+
+* Hover (UI feedback)  
+* Confirm (ações)  
+
+---
+
+### ✨ UX / UI Diferenciada
+
+* Animações suaves  
+* Efeito shine nos cards  
+* Toasts customizados  
+* Modal de confirmação  
+* Feedback visual completo  
+
+---
+
+## 🎨 Design
+
+* Tema escuro com destaque roxo  
+* Tipografia inspirada em interfaces esportivas  
+* Layout centralizado e responsivo  
+* Microinterações inspiradas em jogos  
+
+---
+
+## 🧠 Arquitetura
+
+Estrutura organizada com separação clara de responsabilidades:
+
+* **Components** → UI  
+* **Hooks** → lógica e estado  
+* **Utils** → regras de negócio  
+* **Pages** → orquestração  
+
+---
+
+## 🧪 Validações
+
+* Nome obrigatório  
+* Idade entre 16 e 50  
+* Overall entre 0 e 99  
+* País válido via API  
+* Prevenção de duplicidade  
+
+---
+
+## 💾 Persistência
+
+* Dados salvos no `localStorage`  
+* Inicialização com dataset padrão  
+
+---
+
+## 📦 Project Structure
 
 ```bash
 src/
@@ -96,131 +181,19 @@ src/
   App.tsx
   main.tsx
   styles.css
-```
-
-## ⚙️ Funcionalidades
-
-### 🧩 CRUD Completo
-
-* Criar jogador
-* Editar jogador
-* Excluir jogador
-* Filtros e listagem dinâmica
-
----
-
-### 🔍 Filtros Avançados
-
-* Nome
-* Posição
-* Nacionalidade
-* Faixa etária
-* Overall
-
----
-
-### 🌍 Integração com API
-
-* Busca inteligente de países
-* Suporte a PT/EN
-* Exibição de bandeiras
-
----
-
-### 🖼️ Upload de Imagem
-
-* Upload opcional
-* Resize automático (120x120)
-* Validação de tipo e tamanho
-* Recorte interativo antes de salvar (Crop)
-* Controle de zoom e posicionamento
-* Redimensionamento para exibição consistente
-  
-### 🔊 Sound Effects
-
-* Hover (UI feedback)
-* Confirm (ações)
-
----
-
-### ✨ UX / UI Diferenciada
-
-* Animações suaves
-* Efeito shine nos cards
-* Toasts customizados
-* Modal de confirmação
-* Feedback visual completo
-
----
-
-## 🎨 Design
-
-* Tema escuro com destaque roxo
-* Tipografia inspirada em interfaces esportivas
-* Layout centralizado e responsivo
-* Microinterações inspiradas em jogos
-
-## 🧠 Arquitetura
-
-O projeto foi estruturado com separação clara de responsabilidades:
-
-* **Components** → UI
-* **Hooks** → estado e lógica
-* **Utils** → regras de negócio
-* **Pages** → orquestração
-
-## 🧪 Validações
-
-* Nome obrigatório
-* Idade entre 16 e 50
-* Overall entre 0 e 99
-* País válido via API
-* Prevenção de duplicidade
-
-## 💾 Persistência
-
-* Dados salvos no `localStorage`
-* Inicialização com dataset padrão
-
----
-
-## 🚀 Como Rodar o Projeto
-
-### 1. Clonar o repositório
-
-```bash
-git clone https://github.com/seu-usuario/Ballers_CRUD.git
-```
-
----
-
-### 2. Instalar dependências
-
-```bash
-npm install
-```
-
----
-
-### 3. Rodar o projeto
-
-```bash
-npm run dev
-```
-
----
-
-### 4. Acessar no navegador
-
-```bash
-http://localhost:5173/players
-```
+````
 
 ## 📈 Próximos Passos
 
 * Backend com Node.js + MongoDB
 * Autenticação de usuário
 * Formação tática (drag & drop)
-  
+
 ---
 
+## 👨‍💻 Author
+
+Developed by **Ezequiel Borges**
+
+* GitHub: [https://github.com/kiellzz](https://github.com/kiellzz)
+* LinkedIn: [https://linkedin.com/in/ezequielborgesdev/](https://linkedin.com/in/ezequielborgesdev/)
