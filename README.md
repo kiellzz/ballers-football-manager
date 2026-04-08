@@ -8,21 +8,10 @@
   <img src="https://img.shields.io/badge/API-REST%20Countries-3b82f6?style=for-the-badge" />
 </p>
 
----
-
-## 🚀 Live Demo
-
-<p align="center">
-  <a href="https://kiellzz.github.io/Ballers_CRUD/" target="_blank">
-    <img src="https://img.shields.io/badge/⚽%20Play%20Now-6366f1?style=for-the-badge&logo=vercel&logoColor=white"/>
-  </a>
-</p>
-
----
 
 ## 🧠 About the Project
 
-**BALLERS** is a complete football player management system designed to simulate a real product experience.
+**BALLERS** is a football player squad management system 
 
 Built with a focus on:
 
