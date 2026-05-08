@@ -5,7 +5,10 @@
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=ffffff" />
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=ffffff" />
   <img src="https://img.shields.io/badge/Vitest-729B1B?style=for-the-badge&logo=vitest&logoColor=ffffff" />
-  <img src="https://img.shields.io/github/actions/workflow/status/kiellzz/ballers-football-manager/tests.yml?branch=main&label=CI%20Tests&style=for-the-badge&logo=github-actions&logoColor=white" />
+</p>
+
+<p align="center">
+  ![Tests](https://github.com/kiellzz/ballers-football-manager/actions/workflows/tests.yml/badge.svg)
 </p>
 
 <p align="center">
