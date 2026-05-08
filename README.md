@@ -1,12 +1,11 @@
-
 # ⚽ BALLERS — Football Squad Manager
 
 <p align="center">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=ffffff" />
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=ffffff" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=ffffff" />
-  <img src="https://img.shields.io/badge/API-REST%20Countries-3b82f6?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Vitest-729B1B?style=for-the-badge&logo=vitest&logoColor=ffffff" />
+  <img src="https://img.shields.io/github/actions/workflow/status/kiellzz/ballers-football-manager/tests.yml?branch=main&label=CI%20Tests&style=for-the-badge&logo=github-actions&logoColor=white" />
 </p>
 
 <p align="center">
@@ -69,15 +68,15 @@ Built with a focus on:
 
 ---
 
-## 🧠 Architecture
+## 🧠 Architecture & Quality
 
-The project follows a clean, modular structure:
+The project follows a clean, modular structure and implements automated quality assurance:
 
 * **Components** → Modular UI pieces.
 * **Hooks** → Encapsulated state and business logic.
 * **Utils** → Helper functions and validation rules.
-* **Services** → External API communication.
-* **Data** → Initial mock dataset for a "populated" feel.
+* **CI/CD** → Automated testing pipeline via GitHub Actions on every push/PR.
+* **Unit Testing** → Logic validation using Vitest.
 
 ---
 
@@ -90,29 +89,9 @@ The project follows a clean, modular structure:
 
 ---
 
-## 📦 Project Structure
+👨‍💻 Author
+Developed by Ezequiel Borges
 
-```bash
-src/
-  assets/
-    images/     # UI Graphics & Backgrounds
-    sounds/     # Feedback audio files
-  components/
-    common/     # Reusable UI (Modals, Toasts)
-    player/     # Logic-heavy player components
-  hooks/        # Custom hooks (usePlayers)
-  pages/        # Main application views
-  services/     # API helpers (REST Countries)
-  utils/        # Validations and audio controllers
-  types/        # TypeScript interfaces
-```
+GitHub: https://github.com/kiellzz
 
----
-
-
-## 👨‍💻 Author
-
-Developed by **Ezequiel Borges**
-
-* **GitHub:** [https://github.com/kiellzz](https://github.com/kiellzz)
-* **LinkedIn:** [https://linkedin.com/in/ezequielborgesdev/](https://linkedin.com/in/ezequielborgesdev/)
+LinkedIn: https://linkedin.com/in/ezequielborgesdev/
