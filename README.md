@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  ![Tests](https://github.com/kiellzz/ballers-football-manager/actions/workflows/tests.yml/badge.svg)
+  <img src="https://github.com/kiellzz/ballers-football-manager/actions/workflows/tests.yml/badge.svg" alt="Tests" />
 </p>
 
 <p align="center">
